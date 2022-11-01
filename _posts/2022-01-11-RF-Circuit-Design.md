@@ -124,8 +124,9 @@ $$
 **针对等效电路模型，利用基尔霍夫电压定律得到：**
 $$
 (R+j\omega L)I(z)\Delta z+V(z+\Delta z)=V(z) \\
-\Rightarrow lim_{{\Delta z}\to0}\bigg(-\frac{V(z+\Delta z)-V(z)}{\Delta z}\bigg)=-\frac{dV(z)}{dz}=(R+j\omega L)I(z)
+\Rightarrow lim_{{ \Delta z}\to0}\bigg(-\frac{V(z+\Delta z)-V(z)}{\Delta z}\bigg)=-\frac{dV(z)}{dz}=(R+j\omega L)I(z) /\}\}/
 $$
+
 <div style="page-break-after:always"></div>
 
 **电流同理，因此得到双线传输线的==传输线方程==为：**
