@@ -22,7 +22,7 @@ tags:
 | :--------: | :----------: | :---------------------------------------------------: | :-------: | :------: |
 |   Level    |              |                      Model Type                       |           |    1     |
 |            |              |                                                       |           |          |
-|     KP     | $\mu C_{OX}$ |             Transconductance coefficient              |  $A/V^2$  | 20$\mu$  |
+|     KP     | \\( \mu C_{OX} \\)  |             Transconductance coefficient              |  $A/V^2$  | 20$\mu$  |
 |    VTO     |   $V_{t0}$   |              Zero-bias threshold voltage              |    $V$    |    0     |
 |   LAMBDA   |  $\lambda$   |       Channel-length modulation <br />parameter       | $V^{-1}$  |    0     |
 |   GAMMA    |   $\gamma$   |                 Body-effect parameter                 | $V^{1/2}$ |    0     |
