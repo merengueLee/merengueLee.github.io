@@ -96,7 +96,8 @@ featured-condition-size: 0              # 相同标签数量大于这个数，�
 chrome-tab-theme-color: "#000000"
 service-worker: true
 
-
+#search plugins
+search: true                            # 是否使用搜索插件
 
 # Friends
 #friends: [
