@@ -98,6 +98,37 @@ layout: default
                 </section>
                 {% endif %}
 
+                <!-- Date(日期归档)  start-->
+                <!-- author: Fe -->
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+
+                    <h5><a href="{{'/date/' | prepend: site.baseurl }}">My Date</a></h5>
+
+                    <div class="tags">
+
+                      {% for post in site.posts %}
+                      	{% capture ym %}{{ post.date | date:"%Y%m" }}{% endcapture %}
+                      	{% if yearmonth != ym %}
+                      		{% assign yearmonth = ym %}
+
+                          <a href="/date/#a{{ ym }}" rel="5">{{ post.date | date: "%Y年%m月" }}</a>
+
+                      	{% endif %}
+                      {% endfor %}
+
+                        <!-- {% for tag in site.tags %}
+                            {% if tag[1].size > site.featured-condition-size %}
+                                <a href="{{ site.baseurl }}/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
+                                    {{ tag[0] }}
+                                </a>
+                            {% endif %}
+                        {% endfor %} -->
+
+                    </div>
+                </section>
+                <!-- Date end-->
+
                 <!-- Short About -->
                 <section class="visible-md visible-lg">
                     <hr><h5><a href="{{'/about/' | prepend: site.baseurl }}">ABOUT ME</a></h5>
