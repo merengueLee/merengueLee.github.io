@@ -67,8 +67,8 @@ gitalk:
   clientID: 43f3d9d24fdcdb66ecdb                            #生成的clientID
   clientSecret: d9fb13ee15ae6480506bd341758a5a01c8b7e53e    #生成的clientSecret
   repo: merenguelee.github.io    #仓库名称
-  owner: merenguelee    #github用户名
-  admin: merenguelee
+  owner: merengueLee    #github用户名
+  admin: merengueLee
   distractionFreeMode: true #是否启用类似FB的阴影遮罩
 
 
