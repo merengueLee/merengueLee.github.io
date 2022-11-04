@@ -6,6 +6,7 @@ date:       2022-11-1
 author:     Bohao
 header-img: img/post-bg-ios9-web.jpg
 catalog: true
+original: true                    #是否原创申明
 tags:
     - Analogue IC design
     - Circuit Simulation
