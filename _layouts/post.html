@@ -60,6 +60,17 @@ layout: default
 
 				{{ content }}
 
+                <!-- add 版权申明 by Fe -->
+                <br>
+                {% if site.author==page.author %}
+                    <blockquote><p>版权声明</p></blockquote>
+                    <p>本文为博主<strong>{{page.author}}</strong>原创文章，转载请注明出处
+                        <a href="{{ page.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.title}}">
+                            {{ page.url | prepend: site.url | replace: '//', '/' }}
+                        </a>
+                    </p>
+                {% endif %}
+
                 <hr style="visibility: hidden;">
 
                 <ul class="pager">
@@ -138,6 +149,31 @@ layout: default
                 col-lg-8 col-lg-offset-2
                 col-md-10 col-md-offset-1
                 sidebar-container">
+
+                <!-- Date(日期归档)  start-->
+                <!-- author: Fe -->
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+
+                    <h5><a href="{{'/date/' | prepend: site.baseurl }}">My Date</a></h5>
+
+                    <div class="tags">
+
+                      {% for post in site.posts %}
+                        {% capture ym %}{{ post.date | date:"%Y%m" }}{% endcapture %}
+                        {% if yearmonth != ym %}
+                          {% assign yearmonth = ym %}
+
+                          <a href="/date/#a{{ ym }}" rel="5">{{ post.date | date: "%Y年%m月" }}</a>
+
+                        {% endif %}
+                      {% endfor %}
+
+
+
+                    </div>
+                </section>
+                <!-- Date end-->
 
                 <!-- Featured Tags -->
                 {% if site.featured-tags %}
