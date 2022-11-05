@@ -1,6 +1,6 @@
 # Site settings
 title: Bohao's Blog
-SEOTitle: 伯昊的博客 | Bohao's Blog
+SEOTitle: Bohao的博客 | Bohao's Blog
 header-img: img/firstPage.jpeg #显示在首页的背景
 email: s2327068@ed.ac.uk
 description: "Le vent se lève, il faut tenter de vivre."
@@ -66,7 +66,7 @@ gitalk:
   enable: true    #是否开启Gitalk评论
   clientID: 43f3d9d24fdcdb66ecdb                            #生成的clientID
   clientSecret: d9fb13ee15ae6480506bd341758a5a01c8b7e53e    #生成的clientSecret
-  repo: merenguelee.github.io    #仓库名称
+  repo: merengueLee.github.io    #仓库名称
   owner: merengueLee    #github用户名
   admin: merengueLee
   distractionFreeMode: true #是否启用类似FB的阴影遮罩
