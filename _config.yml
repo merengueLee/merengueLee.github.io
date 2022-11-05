@@ -64,9 +64,9 @@ disqus_username: merenguelee
 # Gitalk
 gitalk:
   enable: true    #是否开启Gitalk评论
-  clientID: 43f3d9d24fdcdb66ecdb                            #生成的clientID
-  clientSecret: d9fb13ee15ae6480506bd341758a5a01c8b7e53e    #生成的clientSecret
-  repo: merengueLee/merengueLee.github.io    #仓库名称
+  clientID: '43f3d9d24fdcdb66ecdb'                            #生成的clientID
+  clientSecret: 'd9fb13ee15ae6480506bd341758a5a01c8b7e53e'    #生成的clientSecret
+  repo:  merengueLee.github.io    #仓库名称
   owner: merengueLee    #github用户名
   admin: merengueLee
   distractionFreeMode: true #是否启用类似FB的阴影遮罩
