@@ -4,7 +4,7 @@ SEOTitle: Bohao的博客 | Bohao's Blog
 header-img: img/firstPage.jpeg #显示在首页的背景
 email: s2327068@ed.ac.uk
 description: "Le vent se lève, il faut tenter de vivre."
-keyword: "Bohao, Bohao Blog, 伯昊的博客, bohao_li,  IC design, RF circuits, Analogue"
+keyword: "Bohao, Bohao Blog, Bohao的博客, bohao_li,  IC design, RF circuits, Analogue"
 url: "http://merenguelee.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/merengueLee/merengueLee.github.io.git" # you code repository https://github.com/qiubaiying/qiubaiying.github.io.git
@@ -59,7 +59,7 @@ kramdown:
 
 # 评论系统
 # Disqus（https://disqus.com/）
-disqus_username: merenguelee
+#disqus_username: merenguelee
 
 # Gitalk
 gitalk:
@@ -97,7 +97,7 @@ chrome-tab-theme-color: "#000000"
 service-worker: true
 
 #search plugins
-search: true                            # 是否使用搜索插件
+#search: true                            # 是否使用搜索插件
 
 # Friends
 #friends: [
