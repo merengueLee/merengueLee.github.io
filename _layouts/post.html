@@ -62,7 +62,7 @@ layout: default
 
                 <!-- add 版权申明 by Fe -->
                 <br>
-                {% if page.author == Bohao %}  <!-- page.author/site -->
+                {% if page.author == "Bohao" %}  <!-- page.author/site -->
                     <blockquote><p>Copyright Statement</p></blockquote>
                     <p>This article is a Original Work of <strong>{{page.author}}</strong>, if reprinted, please indicate the source:
                         <a href="{{ page.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.title}}">
@@ -164,7 +164,7 @@ layout: default
                         {% if yearmonth != ym %}
                           {% assign yearmonth = ym %}
 
-                          <a href="/date/#a{{ ym }}" rel="5">{{ post.date | date: "%Y年%m月" }}</a>
+                          <a href="/date/#a{{ ym }}" rel="5">{{ post.date | date: "%Y - %m" }}</a>
 
                         {% endif %}
                       {% endfor %}
