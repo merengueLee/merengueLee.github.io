@@ -62,7 +62,7 @@ layout: default
 
                 <!-- add 版权申明 by Fe -->
                 <br>
-                {% if page.author==Bohao %}  <!-- page.author -->
+                {% if page.author == Bohao %}  <!-- page.author/site -->
                     <blockquote><p>Copyright Statement</p></blockquote>
                     <p>This article is a Original Work of <strong>{{page.author}}</strong>, if reprinted, please indicate the source:
                         <a href="{{ page.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.title}}">
