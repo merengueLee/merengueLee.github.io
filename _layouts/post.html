@@ -63,8 +63,8 @@ layout: default
                 <!-- add 版权申明 by Fe -->
                 <br>
                 {% if page.author==Bohao %}  <!-- page.author -->
-                    <blockquote><p>版权声明</p></blockquote>
-                    <p>本文为博主<strong>{{page.author}}</strong>原创文章，转载请注明出处
+                    <blockquote><p>Copyright Statement</p></blockquote>
+                    <p>This article is a Original Work of <strong>{{page.author}}</strong>, if reprinted, please indicate the source:
                         <a href="{{ page.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.title}}">
                             {{ page.url | prepend: site.url | replace: '//', '/' }}
                         </a>
