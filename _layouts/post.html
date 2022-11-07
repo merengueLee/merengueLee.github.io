@@ -64,7 +64,7 @@ layout: default
                 <br>
                 {% if page.author == "Bohao" %}  <!-- page.author/site -->
                     <blockquote><p>Copyright Statement</p></blockquote>
-                    <p>This article is a Original Work of <strong>{{page.author}}</strong>, if reprinted, please indicate the source:
+                    <p>This article is an Original Work of <strong>{{page.author}}</strong>, if reprinted, please indicate the source:
                         <a href="{{ page.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.title}}">
                             {{ page.url | prepend: site.url | replace: '//', '/' }}
                         </a>
