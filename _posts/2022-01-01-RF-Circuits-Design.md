@@ -122,11 +122,12 @@ $$
 <font color = grey>**因此将这一微小单元的电流电压关系利用微分进行替代，就能得到该种传输线的传输线方程，对其进行求解就能得到传输线上具体节点的电路电压，下面列出双线传输线的传输线方程，以作参考比较：**</font>
 
 **针对等效电路模型，利用基尔霍夫电压定律得到：**
+
 $$
-(R+j\omega L)I(z)\Delta z+V(z+\Delta z)=V(z) \\
+(R+j\omega L)I(z)\Delta z+V(z+ \Delta z)=V(z) \\
 \Rightarrow lim_{{\Delta z}\to0}\bigg(-\frac{V(z+\Delta z)-V(z)}{\Delta z}\bigg)=-\frac{dV(z)}{dz}=(R+j\omega L)I(z)
 $$
-<div style="page-break-after:always"></div>
+
 
 **电流同理，因此得到双线传输线的==传输线方程==为：**
 $$
@@ -182,7 +183,7 @@ $$
 
  <font color = grey>**通过上面的推导，我们除了解出电压波和电流波的表达式外，还得到了一个非常重要的物理量**</font>——**特征阻抗**  <font color = grey>**，这几个东西几乎会出现在以后所有的射频电路分析中，望谨记。**</font>
 
-<div style="page-break-after:always"></div>
+
 
 #### 3️⃣ 终端加载的无损耗传输线模型 <font size = 3> <font color = grey>(最基础的模型)</font></font>
 
@@ -595,7 +596,6 @@ how to understand the relection?
 
 
 
-f92174fd6af3a5f5bc4dff80a650f25d
 
 
 
