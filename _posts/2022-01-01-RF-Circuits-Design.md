@@ -126,7 +126,7 @@ $$
 $$
 
 (R+j\omega L)I(z)\Delta z+V(z+ \Delta z)=V(z) \\
-\Rightarrow lim_{{ \Delta z }\to0}\bigg(-\frac{V(z+\Delta z)-V(z)}{\Delta z}\bigg)=-\frac{dV(z)}{dz}=(R+j\omega L)I(z)
+\Rightarrow lim_{ { \Delta z } \to 0} \bigg(- \frac{V(z+ \Delta z)-V(z)}{ \Delta z} \bigg)=- \frac{dV(z)}{dz}=(R+j \omega L) I(z)
 
 $$
 
