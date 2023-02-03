@@ -94,7 +94,7 @@ $$
 
 
 
-<div style="page-break-after:always"></div>
+
 
 <font color = grey>**等效电路的==一般形式==(为了方便分析)：**</font>
 
@@ -556,7 +556,7 @@ $$
     $$
     若传输线是匹配的，$\Gamma_{in} \rightarrow 0 \ , \ RL \rightarrow \infty  $，直接反映了传输线与波源之间的阻抗失配程度
 
-    <div style="page-break-after:always"></div>
+    
 
   + 插入损耗 (insertion loss, IL)
 
@@ -570,29 +570,10 @@ $$
 
 
 
-<div style="page-break-after:always"></div>
 
 
 
 
-
-how to understand the relection?
-
-> As you say, a transmission line has both distributed capacitance and distributed inductance, which combine to form its characteristic impedance Z0. Let's assume we have a step voltage source whose output impedance ZS matches Z0. Prior to t=0, all voltages and currents are zero.  
-> 一条传输线同时包含分布电容和分布电感，二者的存在形成了传输线的特性阻抗Z0。假设我们有一个阶跃电压信号源Vs，其内阻Zs与特性阻抗Z0相匹配。在t=0之前，传输线上所有分布器件电压电流均为0。
->
-> At the moment the step occurs, the voltage from the source divides itself equally across ZS and Z0, so the voltage at that end of the line is VS/2. The first thing that needs to happen is that the first bit of capacitance needs to be charged to that value, which requires a current to flow through the first bit of inductance. But that immediately causes the next bit of capacitance to be charged through the next bit of inductance, and so on. A voltage wave propogates down the line, with current flowing behind it, but not ahead of it.  
-> 在阶跃发生的那一刻，来自信号源的电压在 ZS 和 Z0 上均分，因此线路末端的电压为 VS/2。所发生的第一件事是，第一个分立单元的电容需要被充电到VS/2，而这需要电流流过该单元的电感。 但这会立即导致下一单元的电容通过下一单元的电感充电，依此类推。 电压波沿线路向下传播，伴随着电流在其后面流动，而不在前。
->
-> If the far end of the line is terminated with a load of the same value as Z0, when the voltage wave gets there, the load immediately starts drawing a current that exactly matches the current that's already flowing in the line. There's no reason for anything to change, so there's no reflection in the line.
->
-> However, suppose the far end of the line is open. When the voltage wave gets there, there's no place for the current that's flowing just behind it to go, so the charge "piles up" in the last bit of capacitance until the voltage gets to the point where it can halt the current in the last bit of inductance. The voltage required to do this happens to be exactly twice the arriving voltage, which creates an inverse voltage across the last bit of inductance that matches the voltage that started the current in it in the first place. However, we now have VS at that end of the line, while most of the line is only charged to VS/2. This causes a voltage wave that propogates in the reverse direction, and as it propogates, the current that's still flowing *ahead* of the wave is reduced to zero behind the wave, leaving the line behind it charged to VS. (Another way of thinking about this is that the reflection creates a reverse current that exactly cancels the original forward current.) When this reflected voltage wave reaches the source, the voltage across ZS suddenly drops to zero, and therefore the current drops to zero, too. Again, everything is now in a stable state.  
-> 但是，假设线路的远端是开路的。当电压波到达那里时，在它后面流动的电流就无处可去，因此电荷“堆积”在最后一单元的电容，直到电压达到可以遏止该单元的电感的电流的大小。能够执行此操作所需的电压恰好是到达电压的两倍，这会在最后一单元的电感产生反向电压，该电压与最初在该单元中启动电流的电压一致。但是，我们现在在线路的末端有 VS，而大部分线路仅充电到 VS/2。这会导致电压波以相反的方向传播，并且随着它的传播，仍在电压波的*前面*流动的正向传播电流在电压波后面减少到零，使波后面的线路充电到 VS。（另一种思考方式是反射产生了一个反向电流，正好抵消了原来的正向电流。）当这个反射的电压波到达源头时，ZS 两端的电压突然下降到零，因此电流也下降到零。同样，现在一切都处于稳定状态。(个人理解：这块相当于把终端的开路状态传递到了信号源)
->
-> Now, if the far end of the line is shorted (instead of open) when the incident wave gets there, we have a different constraint: The voltage can't actually rise, and the current just flows into the short. But now we have another unstable situation: That end of the line is at 0V, but the rest of the line is still charged to Vs/2. Therefore, additional current flows into the short, and this current is equal to VS/2 divided by Z0 (which happens to be equal to the original current flowing into the line). A voltage wave (stepping from VS/2 down to 0V) propogates in the reverse direction, and the current behind this wave is double the original current ahead of it. (Again, you can think of this as a negative voltage wave that cancels the original positive wave.) When this wave reaches the source, the source terminal is driven to 0V, the full source voltage is dropped across ZS and the current through ZS equals the current now flowing in the line. All is stable again.  
-> 现在，如果当入射波到达传输线的远端是那里短路（而不是开路），我们有一个不同的限制条件：电压实际上不能上升，电流只是流入短路。 但是现在我们遇到了另一种不稳定的情况：线路的那一端是 0V，但线路的其余部分仍充电到 Vs/2。因此，附加电流流入短路电路，该电流等于 VS/2 除以 Z0（恰好等于流入线路的原始电流）。一个电压波（从 VS/2 下降到 0V）反向传播，这个波后面的电流是它前面的原始电流的两倍。 （同样，可以将其视为抵消原始正波的负电压波。）当电压波到达源时，信号源端被拉到 0V，整个源电压加到 ZS 上，通过 ZS 的电流等于 现在在线路中流动的电流。(个人理解：这块相当于把终端的短路状态传递到了信号源)
->
-> 
 
 
 
