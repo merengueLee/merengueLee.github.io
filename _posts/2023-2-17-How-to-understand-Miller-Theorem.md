@@ -55,9 +55,9 @@ Node X: $\Delta V$;
 Node Y: $- A \cdot \Delta V$.
 $\Delta Q$ on $C_F$ : $(1+A) \cdot \Delta V \cdot C_F$, and that applies to the input capacitance: 
 
-$
+$$
 C_{in} = (1+A) \cdot C_F
-$
+$$
 
 
 ### BTW: 
@@ -76,9 +76,9 @@ Therefore in a given time, $ t$, a charge of $Q = (V_1 - V_2) t /R$  transfers f
 
 Yes, it is a common-sense, but if we think that carefully, and if we can arrange this in some other way, we can have a resistor-substitute that are quite different from the resistor we considered before. A very classic example for this is switched capacitor (shown below), and after applying this theory, we can know the **equivalent resistor** of this  circuit is:
 
-$
+$$
 R_{eq} = \frac{1}{C_1 \cdot F_{CLK}} 
-$
+$$
 
 <img src="https://raw.githubusercontent.com/merengueLee/my-gallery/master/imag/20230217225306.png" alt="screenshot 2023-02-17 at 22.53.01" style="zoom:30%;" />
 
