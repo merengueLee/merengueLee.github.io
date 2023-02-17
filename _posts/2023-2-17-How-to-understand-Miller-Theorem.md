@@ -1,4 +1,17 @@
+---
+layout:     post
+title:      How to understand Miller Theorem
+subtitle:   深入理解密勒定理
+date:       2023-2-17
+author:     Bohao
+header-img: img/post-bg-ios9-web.jpg
+catalog: true
+original: true                    #是否原创申明
+tags:
+    - Analogue IC design
+    
 
+---
 
 
 
