@@ -1,0 +1,89 @@
+
+
+
+
+# How to understand Miller Theorem
+
+---
+
+## Miller theorem
+
+<img src="https://raw.githubusercontent.com/merengueLee/my-gallery/master/imag/20230217170004.png" alt="screenshot 2023-02-17 at 16.59.57" style="zoom:50%;" />
+
+In short, according to the diagram above, in order to make the current flow in/out of those two nods (X & Y) unchanged. the equations can be get:
+$$
+Z_1 = \frac{Z}{1-\frac{V_Y}{V_X}} \\
+Z_2 = \frac{Z}{1-\frac{V_X}{V_Y}}
+$$
+which is the Miller Theorem.
+
+
+
+## Understanding (for a capacitive impedance)
+
+### How to measure the input inpedance
+
+From above, we could say that the Miller Theorem inverts a “floating” impedance to input impedance of nodes X and Y, so how do we usually measure the input impedance? Usually, we choose this way  below.
+
++ Input a step voltage ($\Delta V$) into the testing node.
++ Measure the charge offered by this this voltage source [$\Delta Q = \Delta V \cdot C$], and then the input impedance of this node can be get.
+
+
+
+### In this case
+
+This diagram shows a very common scenario that a capacitor connected between the input and output of an amplifier.
+
+<img src="https://raw.githubusercontent.com/merengueLee/my-gallery/master/imag/20230217220152.png" alt="screenshot 2023-02-17 at 22.01.45" style="zoom:33%;" />
+
+Node X: $\Delta V$;    Node Y: $- A \cdot \Delta V$.
+$\Delta Q$ on $C_F$ : $(1+A) \cdot \Delta V \cdot C_F$, and that applies to the input capacitance: 
+$$
+C_{in} = (1+A) \cdot C_F
+$$
+
+
+### BTW: 
+
+The measurement of input imepdance also reminds me how we measure the resistor or “equivalent resistor” in a circuit. And before we talk about it, let’s first define what is a resistor.
+
+#### what does a resistor do
+
+<img src="https://raw.githubusercontent.com/merengueLee/my-gallery/master/imag/20230217223001.png" alt="screenshot 2023-02-17 at 22.29.53" style="zoom:30%;" />
+
+The resistor is something that impedes, slows down, the movement of charge. When we think about a resistor below, it’s quite easy to conclude that the current across the resistor is: $I = (V_1 - V_2) / R$.
+
+Therefore in a given time, $ t$, a charge of $Q = (V_1 - V_2) t /R$  transfers from X to Y.
+
+> **Wait, what? What a common-sense! Do I need you tell me that?**
+
+Yes, it is a common-sense, but if we think that carefully, and if we can arrange this in some other way, we can have a resistor-substitute that are quite different from the resistor we considered before. A very classic example for this is switched capacitor (shown below), and after applying this theory, we can know the **equivalent resistor** of this  circuit is:
+$$
+R_{eq} = \frac{1}{C_1 \cdot F_{CLK}} 
+$$
+<img src="https://raw.githubusercontent.com/merengueLee/my-gallery/master/imag/20230217225306.png" alt="screenshot 2023-02-17 at 22.53.01" style="zoom:30%;" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
