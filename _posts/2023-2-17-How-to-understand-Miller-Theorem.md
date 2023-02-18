@@ -4,7 +4,7 @@ title:      How to understand Miller Theorem
 subtitle:   深入理解密勒定理
 date:       2023-2-17
 author:     Bohao
-header-img: img/post-bg-ios9-web.jpg
+header-img: img/home-bg-o.jpg
 catalog: true
 original: true                    #是否原创申明
 tags:
@@ -55,6 +55,7 @@ This diagram shows a very common scenario that a capacitor is connected between 
 
 <u>Node X:</u> $\Delta V$;    
 <u>Node Y:</u> $- A \cdot \Delta V$.
+
 $\Delta Q$ on $C_F$ : $(1+A) \cdot \Delta V \cdot C_F$, and that applies to the input capacitance: 
 $$
 C_{in} = (1+A) \cdot C_F
