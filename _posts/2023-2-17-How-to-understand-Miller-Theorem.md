@@ -53,13 +53,14 @@ This diagram shows a very common scenario that a capacitor connected between the
 
 Node X: $\Delta V$;    
 Node Y: $- A \cdot \Delta V$.
+
 $\Delta Q$ on $C_F$ : $(1+A) \cdot \Delta V \cdot C_F$, and that applies to the input capacitance: 
 
 $$
 C_{in} = (1+A) \cdot C_F
 $$
 
-
+---
 ### BTW: 
 
 The measurement of input imepdance also reminds me how we measure the resistor or “equivalent resistor” in a circuit. And before we talk about it, let’s first define what is a resistor.
