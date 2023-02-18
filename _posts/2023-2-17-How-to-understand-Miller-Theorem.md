@@ -21,6 +21,8 @@ tags:
 
 ## Miller’s theorem
 
+To begin with, a brief introduction to Miller’s theorem is necessary.
+
 <img src="https://raw.githubusercontent.com/merengueLee/my-gallery/master/imag/20230217170004.png" alt="screenshot 2023-02-17 at 16.59.57" style="zoom:50%;" />
 
 In short, according to the diagram above, in order to make the current flow in/out of those two nods (X & Y) unchanged. the equations can be get:
@@ -34,7 +36,7 @@ which is Miller’s Theorem.
 
 
 
-## Understanding (for a capacitive impedance)
+## Understanding 
 
 ### How to measure the input impedance
 
@@ -45,25 +47,36 @@ From above, we could say that Miller’s Theorem inverts a “floating” impeda
 
 
 
-### In this case
+### In this case (a capacitive impedance)
 
 This diagram shows a very common scenario that a capacitor is connected between the input and output of an amplifier.
 
 <img src="https://raw.githubusercontent.com/merengueLee/my-gallery/master/imag/20230217220152.png" alt="screenshot 2023-02-17 at 22.01.45" style="zoom:33%;" />
 
-Node X: $\Delta V$;    
-Node Y: $- A \cdot \Delta V$.
-
+<u>Node X:</u> $\Delta V$;    
+<u>Node Y:</u> $- A \cdot \Delta V$.
 $\Delta Q$ on $C_F$ : $(1+A) \cdot \Delta V \cdot C_F$, and that applies to the input capacitance: 
-
 $$
 C_{in} = (1+A) \cdot C_F
 $$
 
+
+
+### Something Interesting
+
+If we look back to the introduction to Miller’s Theorem, there is something that can be found: $Z_1 + Z_2 = Z$. 
+If we think that not in a mathematical way, it looks like we “cut” the impedance into two pieces ($Z_1$ & $Z_2$ ) and at that “cutting point”, the voltage drops to **0**, like a “virtual ground” (of course, **small signal voltage**, not the real voltage).
+
+<img src="https://raw.githubusercontent.com/merengueLee/my-gallery/master/imag/20230218233324.png" alt="screenshot 2023-02-18 at 23.33.16" style="zoom:40%;" />
+
+> Similarly, recall the case above. $V_X$ and $V_Y$ have different polarities, and there will have a point in $C_F $whose voltage must be 0.
+
+
+
 ---
 ### BTW: 
 
-The measurement of input impedance also reminds me of how we measure the resistor or “equivalent resistor” in a circuit. And before we talk about it, let’s first define what is a resistor.
+The measurement of **input impedance** also reminds me of how we measure the resistor or “equivalent resistor” in a circuit. And before we talk about it, let’s first define what is a resistor.
 
 #### what does a resistor do
 
@@ -85,7 +98,9 @@ $$
 
 
 
+### Reference
 
+[1] Razavi B. Design of analog CMOS integrated circuits[M].
 
 
 
