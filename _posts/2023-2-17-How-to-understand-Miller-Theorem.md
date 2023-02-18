@@ -57,6 +57,7 @@ This diagram shows a very common scenario that a capacitor is connected between 
 <u>Node Y:</u> $- A \cdot \Delta V$.
 
 $\Delta Q$ on $C_F$ : $(1+A) \cdot \Delta V \cdot C_F$, and that applies to the input capacitance: 
+
 $$
 C_{in} = (1+A) \cdot C_F
 $$
