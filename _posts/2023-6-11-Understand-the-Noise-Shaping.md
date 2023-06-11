@@ -22,9 +22,13 @@ tags:
 
 The Noise-Shaping(NS) term is quite important for the Mixed-signal designer and this blog is also the note when I learnt and designed an Oversampling Delta-Sigma Modulator(DSM).
 
-Let’s first start with a basic negative feedback system, shown below, which is composed of a amplifier and a quantiser. The quantiser can be simply modelled as the subtraction of the quantisation noise(the right figure)
+Let’s first start with a basic negative feedback system, shown below, which is composed of a amplifier and a quantiser. 
 
-<img src="https://raw.githubusercontent.com/merengueLee/my-gallery/master/imag/20230610153456.png" alt="screenshot 2023-06-10 at 15.34.53" style="zoom:45%;" />        <img src="https://raw.githubusercontent.com/merengueLee/my-gallery/master/imag/20230610153600.png" alt="screenshot 2023-06-10 at 15.35.41" style="zoom:45%;" />     
+<img src="https://raw.githubusercontent.com/merengueLee/my-gallery/master/imag/20230610153456.png" alt="screenshot 2023-06-10 at 15.34.53" style="zoom:50%;" /> 
+
+The quantiser can be simply modelled as the subtraction of the quantisation noise, like this:
+
+<img src="https://raw.githubusercontent.com/merengueLee/my-gallery/master/imag/20230610153600.png" alt="screenshot 2023-06-10 at 15.35.41" style="zoom:50%;" />     
 
 Therefore, the output of the system will be:
 
