@@ -1,3 +1,19 @@
+---
+layout:     post
+title:      Understand the Noise-Shaping
+subtitle:   深入理解噪声整形
+date:       2023-6-11
+author:     Bohao
+header-img: img/home-bg-o.jpg
+catalog: true
+original: true                    #是否原创申明
+tags:
+    - Analogue IC design
+    - Mixed Signal IC design
+    
+
+---
+
 
 
 # Understand the Noise-Shaping
