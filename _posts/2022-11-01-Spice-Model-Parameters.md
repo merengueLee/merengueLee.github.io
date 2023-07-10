@@ -54,6 +54,7 @@ In addition to that, sometimes we need to guestimate the operating points of the
 $$
 KP = UO \times \frac{8.85\times 10^{-14} \times 3.9 \ F/cm}{TOX}
 $$
+
 be careful with the units.
 
 
