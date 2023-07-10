@@ -33,7 +33,8 @@ tags:
 |     WD     |    $W_D$     |       Lateral diffusion width<br />横向扩散宽度       |  Meters   |    0     |
 |     LD     |    $L_D$     |      Lateral diffusion length<br />横向扩散长度       |  Meters   |    0     |
 |    TOX     |   $T_{ox}$   |                    Oxide thickness                    |  Meters   | $\infty$ |
-|            |              |                                                       |           |          |
+|     UO     |   $\mu$      |                   Channel mobility                  | $cm^2/V/s$  |  350     |
+|               |   |    |   |   |
 |     RD     |    $R_d $    |                Drain ohmic resistance                 | $\Omega$  |    0     |
 |     RS     |    $R_s$     |                Source ohmic resistance                | $\Omega$  |    0     |
 |     RG     |    $R_g$     |                 Gate ohmic resistance                 | $\Omega$  |    0     |
@@ -47,6 +48,12 @@ tags:
 |     AF     |    $A_f$     |                Flicker noise exponent                 |           |    1     |
 |            |              |                                                       |           |          |
 |            |              |                                                       |           |          |
+
+In addition to that, sometimes we need to guestimate the operating points of the transistors, so it's important to know the Transconductance coefficient. However, the PDK file may not show that directly, which means it need to be calculated. To get that, we need two coefficients: UO($\mu$) and TOX($T_{ox}$), and then it can be calculated:
+$$
+KP = UO \times \frac{8.85\times 10^{-14} \times 3.9 \ F/cm}{TOX}
+$$
+be careful with the units.
 
 
 
