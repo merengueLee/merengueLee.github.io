@@ -49,7 +49,7 @@ tags:
 |            |              |                                                       |           |          |
 |            |              |                                                       |           |          |
 
-In addition to that, sometimes we need to guestimate the operating points of the transistors, so it's important to know the Transconductance coefficient. However, the PDK file may not show that directly, which means it need to be calculated. To get that, we need two coefficients: UO($\mu$) and TOX($T_{ox}$), and then it can be calculated:
+In addition to that, sometimes we need to guestimate the operating points of the transistors, so it's important to know the Transconductance coefficient. However, the PDK file may not show that directly, which means it needs to be calculated. To get that, we need two coefficients: UO($\mu$) and TOX($T_{ox}$), and then it can be calculated:
 
 $$
 KP = UO \times \frac{8.85\times 10^{-14} \times 3.9 \ \ F/cm}{TOX}
