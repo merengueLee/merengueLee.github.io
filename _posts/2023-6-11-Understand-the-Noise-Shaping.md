@@ -4,7 +4,7 @@ title:      Understand the Noise-Shaping
 subtitle:   深入理解噪声整形
 date:       2023-6-11
 author:     Bohao
-header-img: img/home-bg-o.jpg
+header-img: img/post-bg-unix-linux.jpg
 catalog: true
 original: true                    #是否原创申明
 tags:
@@ -84,7 +84,6 @@ rather than **1** for the one without noise-shaping.
 
 ### Reference
 [1] Pavan S, Schreier R, Temes G C. Understanding delta-sigma data converters[M]. John Wiley & Sons, 2017.
-
 
 
 
