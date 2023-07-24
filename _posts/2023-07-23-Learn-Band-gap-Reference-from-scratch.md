@@ -29,7 +29,7 @@ Band-gap reference (BGR) is a voltage reference that is independent of temperatu
 
 ### $V_{BE}$ Temperature Dependence
 
-It is known that the collector current of BJT is $I_C = I_S\cdot e^{{(V_{BE}/V_T)}}$, so the voltage across the Base terminal and Emitter is:
+It is known that the collector current of BJT is $I_C = I_S\cdot exp{{(V_{BE}/V_T)}}$, so the voltage across the Base terminal and Emitter is:
 
 
 $$
