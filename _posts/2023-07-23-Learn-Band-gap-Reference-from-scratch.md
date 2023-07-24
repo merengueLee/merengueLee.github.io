@@ -87,13 +87,17 @@ It also can be concluded that the voltage across $R_3$ is:
 $$
 V_{R3} = V_T\ ln(\frac{I_1 I_{S2}}{I_2I_{S1}})
 $$
+
 so 
+
 $$
 V_{R1} = V_{R2} = \frac{R_2}{R_3}\ V_{R3} =  \frac{R_2}{R_3}\ V_T\ ln(n)
 $$
 Hence the output voltage is:
+
 $$
 V_{out} = V_{BE1} + V_{R1} = V_{BE1} + \frac{R_2}{R_3}\ V_T\ ln(n)
+
 $$
 Once $(R_2/R_3)\cdot ln(n) \approx 17.2$, the temperature dependence of the output voltage can be cancelled out, and this temperature-independent voltage is around $1.25\ V$.
 
