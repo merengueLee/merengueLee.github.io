@@ -2,7 +2,7 @@
 layout:     post
 title:      Cadence Virtuoso Simulation Tips (Updating)
 subtitle:   Cadence Virtuoso仿真提示（更新中）
-date:       2023-7-19
+date:       2023-07-19
 author:     Bohao
 header-img: img/post-bg-keybord.jpg
 catalog: true
