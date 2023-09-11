@@ -31,15 +31,20 @@ The charging speed of the first stage is determined by the large-signal bandwidt
 ### Large-signal Bandwidth
 
 From the figure given before, the slope of the output voltage is determined by the slew rate of the designed op-amp, and the expected slew rate can be designed by the bias current of the circuit. For an amplifier which is charging a capacitor, the slew rate can be expressed as
+
 $$
 S = \left(\frac{d V_o}{dt} \right)_{max} = \frac{I_{o,max}}{C},
 $$
+
 which means the expected slew rate and the loading capacitor will determine the maximum output current (bias current) of the amplifier. 
 In a general scenario, the amplifier charges the capacitor with a sinusoid voltage (always configured as a voltage buffer form), which means the output voltage is $V_o = V_{max} sin(\omega t)$. The slew rate is then given by:
+
 $$
 S = \left(\frac{d V_o}{dt} \right)_{max} = \omega V_{o,max} = 2 \pi f\ V_{max},
 $$
+
 where $V_{max}$ is the amplitude of the output signal. In the end, the large-signal bandwidth can be defined as:
+
 $$
 f = \frac{S}{2 \pi \ V_{max}}.
 $$
@@ -52,17 +57,23 @@ For consideration of the small-signal bandwidth, let’s first begin with a simp
 <img src="https://raw.githubusercontent.com/merengueLee/my-gallery/master/imag/20230911160855.png" alt="screenshot 2023-09-11 at 16.08.50" style="zoom:50%;" />
 
 Assuming the amplifier is a single pole system, whose transfer function is given by:
+
 $$
 A(s) = \frac{A_o}{1+ s/\omega_o},
 $$
+
 where $\omega_o$ is the pole of the system, and $A_o$ is the open-loop gain of the amplifier. Therefore, the transfer function from the input to the output is expressed as:
+
 $$
 H(s) = \frac{A(s)}{1+ \beta A(s)} = \frac{A_o}{1+\beta A_o} \frac{1}{1+s/[(1+\beta A_o)\cdot \omega_o]},
 $$
+
 and then the time constant is given by:
+
 $$
 \tau = \frac{1}{(1+\beta A_o)\cdot \omega_o} \approx \frac{1}{\beta A_o \omega_o} = \frac{1}{\beta\cdot GBW},
 $$
+
 where $GBW$ is the gain-bandwidth of the amplifier. For a step input signal, which is $V_{in} = V_d \cdot u(t)$, the output would be like:
 
 <img src="https://raw.githubusercontent.com/merengueLee/my-gallery/master/imag/20230911162812.png" alt="screenshot 2023-09-11 at 16.28.07" style="zoom:50%;" />
@@ -72,7 +83,8 @@ In other words, the speed of charging at the linear setttling stage is determine
 
 
 
-
+#### Reference
+https://zhuanlan.zhihu.com/p/510377997
 
 
 
