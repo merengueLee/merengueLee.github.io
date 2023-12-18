@@ -48,7 +48,7 @@ Of course, there are some methods to minimise these effect, one using trasmissio
 > Ideally, pMOS and nMOS can absorb the channel charge of each other, and have no effect on the holding voltage. However, there are some practical factors make it impossible:
 >
 > - The turn-off time of the transistors are signal-dependent because of the changing source voltage, which means n-switch and p-switch toggle at different moment.
-> - The channel charge of nMOS and pMOS are also signal-dependent. The higher $|V_{GS}|$, the more channel charge it will be, and a part of the extra charge will transfer to the holding capacitor.
+> - The channel charge of nMOS and pMOS are also signal-dependent. The higher $V_{GS}$ magnitude, the more channel charge it will be, and a part of the extra charge will transfer to the holding capacitor.
 >
 > <img src="https://raw.githubusercontent.com/merengueLee/my-gallery/master/imag/20231217220142.png" alt="screenshot 2023-12-17 at 22.01.37" style="zoom:50%;" />
 
