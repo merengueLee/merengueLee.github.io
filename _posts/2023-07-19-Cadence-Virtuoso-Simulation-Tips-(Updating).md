@@ -22,7 +22,7 @@ tags:
 
 
 
-### Some parameter settings in Transient simulation
+### 1. Some parameter settings in Transient simulation
 
 Reference: https://web.engr.oregonstate.edu/~moon/kaj/cadence.html#top
 
@@ -62,3 +62,59 @@ There are parameters that you can set:
 “**strobedelay**” : sets the offset within the period relative to ‘skipstart’.
 “**skipcount**” : If this is set to N, then only every N'th point is saved.
 Normally, I set the strobeperiod to sampling time of ADC I’m testing.
+
+
+
+### 2. The difference between Harmonic Balance & Shooting in PSS simulation
+
+Reference: https://community.cadence.com/cadence_blogs_8/b/rf/posts/tip-of-the-week-when-to-use-harmonic-balance-engine-vs-shooting-newton-engine
+
+---
+
+They are two simulation engines in the PSS setting, and an inappropriate setting can lead to the “no convergence” issue of simulation.
+
+Based on Tawna’s(author of the reference) description: 
+
+> The **Shooting** Newton algorithm uses an adaptive time step control, which is particularly effective for <u>sharp transitions</u>. Convergence is robust and not as sensitive to <u>model imperfections</u>.
+
+> **Harmonic balance** (HB) is much faster for mildly nonlinear circuits.
+
+##### Conclusion: 
+
+These two engines have different algorithms, and if your circuit is mildly nonlinear, **HB** is more recommended because it’s <u>faster</u> than **Shooting**. 
+It looks like the **Shotting** is <u>easier to get convergence</u> because normally non-convergence is caused by non-linearity. 
+The results should be similar if the simulation parameter setting is properly.
+
+
+
+Tawna also listed some cases that are suitable for each engine(I just copy them):
+
+**For Harmonics Balance**: 
+
++ High dynamic range, weakly-nonlinear systems
+  + RF front-ends (LNA, Mixer) 
+  + IQ modulators
++ Mildly nonlinear oscillators with resonators, such as
+  - LC oscillators 
+  - Crystal oscillators 
+  - Negative-gain oscillators 
++ Circuits with distributed components
+  - Transmission lines 
+  - S-parameter models
+
+**For Shooting Newton:** 
+
++ Circuits where input signals have sharp transitions 
+
++ Strongly nonlinear circuits
+
+  - Frequency dividers 
+
+  - Strongly-nonlinear resonatorless **oscillators**, such as
+    - Ring oscillators, 
+    - Relaxation oscillators,
+    - Oscillators containing digital control components,
+    - Oscillators with dividers.
+
+
+
