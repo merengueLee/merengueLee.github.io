@@ -55,9 +55,7 @@ where $K_d$ is the gain of the PFD and CP.
 Considering the inverted phase, the loop gain would be:
 
 $$
-
 -G(s)|_{s=j\omega} = \frac{-K_d K_{vco}(1+j\omega \tau_2)}{\omega^2 C_1 N (1+j\omega \tau_1) } \cdot \frac{\tau_1}{\tau_2}\ ,
-
 $$
 
 and the phase of the transfer function is:
@@ -83,9 +81,7 @@ and this means the phase margin is mainly determined by the zero and the second 
 In addition, the unity-gain-bandwidth(UGB) can be calculated from the open-loop gain by making the $G(s)=1$ at $\omega_C$ :
 
 $$
-
-G(\omega)|_{\omega =\omega_c}=\frac{K_d K_{vco} F(\omega)}{\omega \cdot N} = 1 \Rightarrow \ \omega_C = \frac{K_d K_{vco}K_F}{N},
-
+G(\omega)|_{\omega =\omega_c}=\frac{K_dK_{vco}F(\omega)}{\omega\cdotN} = 1\Rightarrow\ \omega_C =\frac{K_dK_{vco}K_F}{N},
 $$
 
 where $K_F = \tau_2/(C_1 + C_2)$, and if the $C_2$ is way larger than $C_1$, the $K_F \approx R_2$. Therefore, the UGB would be:
