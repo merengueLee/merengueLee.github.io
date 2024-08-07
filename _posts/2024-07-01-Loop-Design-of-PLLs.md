@@ -41,7 +41,7 @@ $$
 where $\tau_1 =R _2 {(C_1 C_2)}/{(C_1 + C_2)}$ , and $\tau_2 = R_2 C_2$. From the $F(s)$, a zero and two poles can be seen:
 
 $$
-\omega _Z = -\tau_2 ^{-1} = -\frac{1}{R_2C_2},\ \omega_{p0} = 0,\ \omega_{p} = -\tau_1 ^{-1} = -\frac{C_1 + C_2}{R_2(C_1 C_2)} = \omega_Z(1+\frac{C_2}{C_1})
+\omega_Z = -\tau_2 ^{-1} = -\frac{1}{R_2C_2},\ \omega_{p0} = 0,\ \omega_{p} = -\tau_1 ^{-1} = -\frac{C_1 + C_2}{R_2(C_1 C_2)} = \omega_Z(1+\frac{C_2}{C_1})
 $$
 
 Based on the system diagram and the derivation above, the loop gain of the PLL is given by:
@@ -156,7 +156,7 @@ $$
 
  and the recommended value of $\tau _3$ is: $5\omega_C < \tau_3 ^{-1} < F_{ref}$, so this new added pole can affect the PM and even the $\omega _C$. 
 
-While for the design strategy of this pole, Prof. Liu suggested the approximation at first of the $\omega _C$ can be set up to $1/5 F_{ref}$.
+While for the design strategy of this pole, Prof. Liu suggested the approximation at first of the $\omega_C$ can be set up to $1/5 F_{ref}$.
 
 
 
