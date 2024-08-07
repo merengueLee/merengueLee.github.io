@@ -84,7 +84,7 @@ In addition, the unity-gain-bandwidth(UGB) can be calculated from the open-loop 
 
 
 $$
-G(\omega)|_{\omega =\omega_c}=\frac{K_dK_{vco}F(\omega)}{\omega\cdotN} = 1\Rightarrow\ \omega_C =\frac{K_dK_{vco}K_F}{N},
+G(\omega)|_{\omega =\omega_c}= \frac{K_d K_vco F(\omega) }{\omega\cdotN} = 1 \Rightarrow\ \omega_C = \frac{K_dK_vcoK_F}{N},
 $$
 
 
