@@ -6,7 +6,7 @@ Reference:
 
 + [https://en.wikipedia.org/wiki/Q_factor]
 
-+ [https://blog.csdn.net/u010486560/article/details/120246025?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522170047915016800197018684%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=170047915016800197018684&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-120246025-null-null.142%5Ev96%5Epc_search_result_base3&utm_term=三阶PLL&spm=1018.2226.3001.4187]
++ [https://blog.csdn.net/u010486560/article/details/120246025?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522170047915016800197018684%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=170047915016800197018684&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2\~all\~sobaiduend~default-1-120246025-null-null.142%5Ev96%5Epc_search_result_base3&utm_term=三阶PLL&spm=1018.2226.3001.4187]
 
 + [https://blog.csdn.net/luohuo9844/article/details/133749833]
 
@@ -65,14 +65,14 @@ $$
 \phi(f) = tan^{-1}(\frac{f}{f_Z})-tan^{-1}(\frac{f}{f_{p}})+180^o.
 $$
 
-Therefore, the maximum phase margin of this system setup can be calculated by letting $(d \phi(\omega)/d \omega) = 0$ at $\omega_C$, where $\omega _C$ is the unity gain-bandwidth of the open-loop gain. In this case, the $\omega _C$ and the maximum phase margin can be obtained:
+Therefore, the maximum phase margin of this system setup can be calculated by letting $(d \phi(\omega)/d \omega) = 0$ at $\omega_C$, where $\omega_C$ is the unity gain-bandwidth of the open-loop gain. In this case, the $\omega_C$ and the maximum phase margin can be obtained:
 
 $$
 \omega_C = \frac{1}{\sqrt{\tau_1 \tau_2}}, \\
-\phi _p = tan^{-1}(\omega \tau_2)-tan^{-1}(\omega \tau_1),
+\phi_p = tan^{-1}(\omega \tau_2)-tan^{-1}(\omega \tau_1),
 $$
 
-and this means the phase margin is mainly determined by the zero and the second pole, and the $\omega _C$ is at the “middle” of $\omega_Z$ and $\omega_{p2}$ (Geometric mean), so, the bode plot would be something like the figure below.
+and this means the phase margin is mainly determined by the zero and the second pole, and the $\omega_C$ is at the “middle” of $\omega_Z$ and $\omega_{p2}$ (Geometric mean), so, the bode plot would be something like the figure below.
 
 <img src="https://raw.githubusercontent.com/merengueLee/my-gallery/master/imag/20240725161754.png" alt="screenshot 2024-07-25 at 16.17.47" style="zoom:80%;" />
 
@@ -81,13 +81,13 @@ and this means the phase margin is mainly determined by the zero and the second 
 In addition, the unity-gain-bandwidth(UGB) can be calculated from the open-loop gain by making the $G(s)=1$ at $\omega _C $ :
 
 $$
-G(\omega)|_{\omega =\omega_c}=\frac{K_d K_{vco} F(\omega)}{\omega \cdot N} = 1 \Rightarrow \ \omega_ C = \frac{K_d K_{vco}K_F}{N},
+G(\omega)|_{\omega =\omega_c}=\frac{K_d K_{vco} F(\omega)}{\omega \cdot N} = 1 \Rightarrow \ \omega_C = \frac{K_d K_{vco}K_F}{N},
 $$
 
-where $K_F = \tau _2/(C_1 + C_2)$, and if the $C_2$ is way larger than $C_1$, the $K_F \approx R_2$. Therefore, the UGB would be:
+where $K_F = \tau_2/(C_1 + C_2)$, and if the $C_2$ is way larger than $C_1$, the $K_F \approx R_2$. Therefore, the UGB would be:
 
 $$
-\omega_ C = \frac{K_d K_{vco}R_2}{N}.
+\omega_C = \frac{K_d K_{vco}R_2}{N}.
 $$
 
 This important equation gives us a straightforward sense of the loop bandwidth.
@@ -104,7 +104,7 @@ $$
 H(s) = \frac{N \cdot G(s)}{1+G(s)}=\frac{N\cdot K(s+\omega_Z)}{s^2(s/\omega_p +1)+ K(s+\omega_Z)},
 $$
 
-where $K=\omega_ C = \frac{K_d K_{vco}K_F}{N}$, and for simplification, we define a factor $\gamma =\omega_C/\omega_Z = \omega_p/\omega_C$, which describes the “distance” between $\omega_Z$, $\omega_C$ and $\omega_p$.  Therefore, the closed-loop response would be:
+where $K=\omega_C = \frac{K_d K_{vco}K_F}{N}$, and for simplification, we define a factor $\gamma =\omega_C/\omega_Z = \omega_p/\omega_C$, which describes the “distance” between $\omega_Z$, $\omega_C$ and $\omega_p$.  Therefore, the closed-loop response would be:
 
 $$
 \Rightarrow H(s)=\frac{N\cdot (s+\omega_c / \gamma)}{s^3/\omega_p+s^2+\omega_c \cdot s+\omega_c^2/\gamma}=
@@ -112,7 +112,7 @@ $$
 \Rightarrow \frac{H(s)}{N}= \frac{\omega_c}{\xi_2 -1}\left[ \frac{\xi_2}{s+\omega_c} - \frac{\xi_2+\omega_c}{s^2+s\cdot 2\cdot \xi_2\cdot\omega_c+\omega_c^2}  \right],
 $$
 
-where the $\xi_2$ is the “Damping Ratio” of the system, and also $\xi _2 = (1/2Q)=(\gamma - 1)/2$, where $Q$ is the “Quality Factor”.  
+where the $\xi_2$ is the “Damping Ratio” of the system, and also $\xi_2 = (1/2Q)=(\gamma - 1)/2$, where $Q$ is the “Quality Factor”.  
 
 > It can be observed that the second factor of the expression $H(s)/N$ is the normal expression of the second-order low-pass filter. Therefore, the theory of LTI system can also be applied to this scenario to help to understand. 
 >
@@ -142,7 +142,7 @@ The reference spur is normally caused by the switching of the charge pump at teh
 
 <img src="https://raw.githubusercontent.com/merengueLee/my-gallery/master/imag/20240806193708.png" alt="screenshot 2024-08-06 at 19.36.59" style="zoom:70%;" />
 
-Since the addition of the pole can cause a decrease in PM, to minimise its effect, this pole is normally situated between $\omega_ C$ and $\omega _p$. The added attenuation from the pole is given by:
+Since the addition of the pole can cause a decrease in PM, to minimise its effect, this pole is normally situated between $\omega_C$ and $\omega_p$. The added attenuation from the pole is given by:
 
 $$
 Atten.=20log[(2 \pi F_{ref}\cdot \tau_3)^2+1],
@@ -151,10 +151,10 @@ $$
 where $\tau_3 = R_3 \cdot C_3$. The attenuation of the reference spur is normally determined by the noise floor needed, so from a known attenuation, the location of the pole or the $\tau_3$ is:
 
 $$
-\tau _3 = \sqrt{\frac{10^{Atten./20}-1}{(2\pi\cdot F_{ref})^2}},
+\tau_3 = \sqrt{\frac{10^{Atten./20}-1}{(2\pi\cdot F_{ref})^2}},
 $$
 
- and the recommended value of $\tau _3$ is: $5\omega_C < \tau_3 ^{-1} < F_{ref}$, so this new added pole can affect the PM and even the $\omega _C$. 
+ and the recommended value of $\tau_3$ is: $5\omega_C < \tau_3 ^{-1} < F_{ref}$, so this new added pole can affect the PM and even the $\omega_C$. 
 
 While for the design strategy of this pole, Prof. Liu suggested the approximation at first of the $\omega_C$ can be set up to $1/5 F_{ref}$.
 
