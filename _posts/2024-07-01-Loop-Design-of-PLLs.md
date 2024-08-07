@@ -78,7 +78,7 @@ and this means the phase margin is mainly determined by the zero and the second 
 
 
 
-In addition, the unity-gain-bandwidth(UGB) can be calculated from the open-loop gain by making the $G(s)=1$ at $\omega _C $ :
+In addition, the unity-gain-bandwidth(UGB) can be calculated from the open-loop gain by making the $G(s)=1$ at $\omega_C$ :
 
 $$
 G(\omega)|_{\omega =\omega_c}=\frac{K_d K_{vco} F(\omega)}{\omega \cdot N} = 1 \Rightarrow \ \omega_C = \frac{K_d K_{vco}K_F}{N},
