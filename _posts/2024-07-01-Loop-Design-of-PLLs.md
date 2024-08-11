@@ -1,3 +1,23 @@
+---
+layout:     post
+title:      Loop Design of PLLs
+subtitle:   锁相环的环路设计
+date:       2024-07-01
+author:     Bohao
+header-img: img/home-bg-art.jpg
+catalog: true
+original: true                    #是否原创申明
+tags:
+    - Analogue IC design
+    - Mixed Signal IC design
+    
+
+
+
+---
+
+
+
 # Loop Design of PLLs
 
 Reference: 
