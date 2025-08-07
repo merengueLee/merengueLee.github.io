@@ -1,10 +1,10 @@
 ---
 layout:     post
-title:      Understnading of circuit noise 
-subtitle:   理解电路噪声
+title:      Understnading of Circuit Noise 
+subtitle:   深入理解电路噪声
 date:       2025-02-24
 author:     Bohao
-header-img: img/home-bg-art.jpg
+header-img: img/home-bg-o.jpg
 catalog: true
 original: true                    #是否原创申明
 tags:
@@ -451,7 +451,7 @@ Assuming the introduced noise is $V_{noise}$, for the noise it represents to the
   V_{out} = \frac{A}{1+\beta A} (V_{in}- \beta \cdot V_{noise,4}) \approx \frac{1}{\beta} V_{in} - V_{noise,4}
   $$
 
-+ 
+  
 
 These are just some general conclusions, which are just give us a brief impression, and for the specific circuits, we need specific analysis. 
 
