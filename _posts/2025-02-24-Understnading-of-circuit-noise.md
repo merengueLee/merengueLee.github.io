@@ -107,6 +107,7 @@ But why do this system can know the spectral information of the input? It will b
 
 * $n=1$
   - The output of the multiplier is: 
+
     $ =cos(2\pi \cdot 100 \cdot t) \cdot (1+sin[2\pi \cdot 4.05kHz \cdot t ]) $  Volts
     
     $ = cos(2\pi \cdot 100 \cdot t) + \frac{1}{2} \{ sin[2\pi(3.95k)t]+sin[2\pi(4.15k)t]\} $ Volts
@@ -164,7 +165,7 @@ $$
 V_{RMS} = \sqrt{\int_{f_L}^{f_H}{ V^2_{noise}(f)\cdot df }}\ \ \  Volts,
 $$
 
-where $f_L$ and $f_H$ are the lower limit and higher limit of the bandwidth of interest;  $V^2_{noise}(f)$ is the noise’s PSD(units, V^2/Hz). 
+where $f_L$ and $f_H$ are the lower limit and higher limit of the bandwidth of interest;  $V^2_{noise}(f)$ is the noise’s PSD(units, $V^2/Hz$). 
 
 
 
@@ -420,24 +421,28 @@ Normally the amplifiers are used in a feedback loop, and the places that the noi
 Assuming the introduced noise is $V_{noise}$, for the noise it represents to the output(or it transfer function to the output), it can be easily derived: 
 
 + **Case 1**: the noise is amplified by closed-loop gain
+
   $$
   V_{out} = \frac{A}{1+\beta A} (V_{in}+V_{noise,1})
   $$
    
 
 + **Case 2**: the noise is shaped by loop-gain (Noise-shaping)
+
   $$
   V_{out} = \frac{A}{1+\beta A} \cdot V_{in} + \frac{1}{1+\beta A} \cdot V_{noise,2}
   $$
   
 
 + **Case 3**: equivalent to the **Case 1**, just a phase inverting (and normally we do not care about the phase of noise)
+
   $$
   V_{out} = \frac{A}{1+\beta A} (V_{in}-V_{noise,3})
   $$
   
 
 + **Case 4**: the noise is directly superpositioned at the output.
+
   $$
   V_{out} = \frac{A}{1+\beta A} (V_{in}- \beta \cdot V_{noise,4}) \approx \frac{1}{\beta} V_{in} - V_{noise,4}
   $$
