@@ -36,22 +36,31 @@ The circuit noise actually includes many types, the quantisation noise, coupling
 ### Power and Energy
 
 Starting from a simple sine-wave whose period is $T$ (Frequency is $f$), and the expression of it is $v(t)=V_P\ sin(2\pi f \cdot t)$, its the instantaneous power  dissipated on a resistor $R$ will be:
+
 $$
 P_{inst}(t)=\frac{v^2(t)}{R}=\frac{V_P ^2\ sin^2 (2\pi \cdot \frac{t}{T})}{R}.
 $$
-To get the average power dissipated on the resistor $R$, we must do integration, but how? If we integrate this sine-signal from $0$ to $\infin$, the results also goes to infinity; this is no doubt and is useless for calculating the SNR. Back to the name “average power”, it looks like we need a averaging, like **doing integration and “spreading” it evenly throughout the entire period of time (dividing it by the integrated time)**. 
+
+To get the average power dissipated on the resistor $R$, we must do integration, but how? If we integrate this sine-signal from $0$ to $ \infin $, the results also goes to infinity; this is no doubt and is useless for calculating the SNR. Back to the name “average power”, it looks like we need a averaging, like **doing integration and “spreading” it evenly throughout the entire period of time (dividing it by the integrated time)**. 
+
 Yes, for sine-wave which is periodical, we actually only need to focus on one cycle; based on this, the **average power dissipated** could be gotten(the integration is the instataneous power and spreading it throughout the period T): 
+
 $$
 Average\ power\ dissipated = \frac{1}{T} \int _0 ^T \frac{V_P ^2 sin^2(2\pi f \cdot t)}{R} \cdot dt;
 $$
+
 moving the resistor, the **Mean-squared(MS) voltage** could be gotten: 
+
 $$
 \bar{v^2}= \frac{1}{T} \int _0 ^T {V_P ^2 sin^2(2\pi f \cdot t)} \cdot dt\ ,
 $$
+
 with the units of volts squared. With this, the **Root-mean-squared(RMS, “有效值” in Chinese)** voltage of this sine wave signal is given:
+
 $$
 \sqrt{\bar{v^2}} = V_{RMS}=\sqrt{\frac{1}{T} \int _0 ^T {V_P ^2 sin^2(2\pi f \cdot t)} \cdot dt\ }=\frac{V_P}{\sqrt{2}},
 $$
+
 with the units of voltage. We can also say that when $V_{RMS}=V_{DC}$, the power dissipated by the resistor with either a sinusoidal or DC source is the same. 
 
 In addition to this, when performing noise analysis, for example, check the total noise powre at the output form different source, the **MS value** is normally summed up, rather than the RMS value since the MS value is actually something that represents the power of each noise source (Summing power rather than summing voltage). 
@@ -99,7 +108,9 @@ But why do this system can know the spectral information of the input? It will b
 * $n=1$
   - The output of the multiplier is: 
     $=cos(2\pi \cdot 100 \cdot t) \cdot (1+sin[2\pi \cdot 4.05kHz \cdot t ])$  Volts
+    
     $= cos(2\pi \cdot 100 \cdot t) + \frac{1}{2} \{ sin[2\pi(3.95k)t]+sin[2\pi(4.15k)t]\} $ Volts
+    
   - All the components can not pass the filter until $n=40$.
 * $n=40$
   * The output of the multiplier is: 
@@ -148,9 +159,11 @@ Before diving in to the specific circuits, defining and modelling the circuit no
 #### RMS of circuit noise
 
 The calculation of RMS value of the circuit noise is different from that of a periodical signal; for a periodical signal, the **integration is done within a single period and divide the integration with its period**. However, for the calculation of RMS of the noise, it is:
+
 $$
 V_{RMS} = \sqrt{\int_{f_L}^{f_H}{ V^2_{noise}(f)\cdot df }}\ \ \  Volts,
 $$
+
 where $f_L$ and $f_H$ are the lower limit and higher limit of the bandwidth of interest;  $V^2_{noise}(f)$ is the noise’s PSD(units, V^2/Hz). 
 
 
@@ -158,13 +171,17 @@ where $f_L$ and $f_H$ are the lower limit and higher limit of the bandwidth of i
 #### Noise equivalent bandwidth(NEB)
 
 Normally, the noise is band-limited, so the bandwidth should be taken into account when calculating the RMS value of the noise. If the PSD of the noise is a signle-pole roll-off at the certain bandwidth $f_{-3dB}$, which is:
+
 $$
 PSD(f) = \frac{V^2_{LF,noise}}{1+(f/f_{-3dB})^2},
 $$
+
 the RMS value of the noise will be:
+
 $$
 V^2_{onoise, RMS} = \int_0^\infin PSD(f)\cdot df = V^2_{LF,noise} \cdot f_{-3dB}\cdot \frac{\pi}{2}=V^2_{LF,noise} \cdot NEB.
 $$
+
 From the calculation of the NEB, it can be easily concluded that the derivation is actually equivalent to a spreading  the noise energy throughout the $ f_{-3dB}$ or finding a new upper limit of intertested bandwidth the “equivalent” noise PSD, like the figure below shows.
 
 
@@ -184,9 +201,11 @@ In order to handle different types of input sources (current/voltage) and make t
 <img src="https://raw.githubusercontent.com/merengueLee/my-gallery/master/imag/20250506230923.png" alt="screenshot 2025-05-06 at 23.09.18" style="zoom:50%;" />
 
 Like the figure above shows, the input-referred noise is modelled by a current source($I_{inoise,RMS}$) in parallel with the input resistance($R_{in}$) and a voltage source($V_{inoise,RMS}$) in series with the input resistance. The output noise can be calculated by:
+
 $$
 V^2_{onoise,RMS}=4kTR_s\cdot B \cdot (\frac{AR_{in}}{R_s+R_{in}})^2 + I^2_{inoise,RMS}\cdot (\frac{AR_{in}R_{s}}{R_s+R_{in}})^2 + V^2_{inoise,RMS} (\frac{AR_{in}}{R_s+R_{in}})^2 \ ,
 $$
+
 where the first term is the noise generated from the source resistance $R_s$, and the calculation is simply done by the superposition theory. 
 
 This model can cover two scenarios we normally meet during the nose analysis: 
@@ -205,14 +224,17 @@ The way to determine the $V_{inoise,RMS}$ and $I_{inoise,RMS}$ is also straightf
 #### Signal-to-Noise Ratio(SNR)
 
 A  very common metrics in the signal chain circuits, like the amplifiers or ADCs, and can be calculated by:
+
 $$
 SNR=10\ log \frac{P_s}{P_{noise}}=20\ log\ \frac{V_{s,RMS}}{V_{noise,RMS}}
 $$
+
 In addition, for a system, it will also has two metrics called $SNR_{in}$ and $SNR_{out}$; for $SNR_{in}$, it only considers the noise of signal source, or in other words, the qulity of the input signal to the system; while for the $SNR_{out}$, it is a metric to evaluate the qulity of the system output.  
 
 <img src="https://raw.githubusercontent.com/merengueLee/my-gallery/master/imag/20250507232935.png" alt="screenshot 2025-05-07 at 23.29.30" style="zoom:60%;" />
 
 For the system shown above, those two metrics can be calculated by:
+
 $$
 SNR_{in}=\frac{V^2_{s,RMS}\ \cdot [\frac{R_{in}}{R_{in} + R_s}]^2}{4kTR_s B \ \cdot [\frac{R_{in}}{R_{in} + R_s}]^2} = \frac{V^2_{s,RMS}}{4kTR_s B}
 $$
@@ -225,9 +247,11 @@ $$
 #### Noise Figure (NF)
 
 For a system, $SNR_{in}$ and $SNR_{out}$ can be different, and for a phasical system, the $SNR_{in}$ is normally larger than $SNR_{out}$ since the system will always have noise and corrupt the signal. Therefore, a new metrics is propose, the **NF**, to evaluate how “noisy” the system is, and the way it is calculated is:
+
 $$
 NF=10\ log\frac{SNR_{in}}{SNR_{out}} = 10\ log(SNR_{in}) - 10\ log(SNR_{out}) = 10\ log(F),
 $$
+
 where $F$ is another metric called **Noise Factor**.
 
 
@@ -325,18 +349,22 @@ To describe the correlation between two signals, a parameter $C$ is created, and
 ##### Correlation of Input-referred Noise Source
 
 Remember the model of Input-referred noise model? The noise of an amplifier is modelled by an input-referred current source and voltage source, and the calculation of output noise is given by (already shown and discussed above):
+
 $$
 V^2_{onoise,RMS}=4kTR_s\cdot B \cdot (\frac{AR_{in}}{R_s+R_{in}})^2 + I^2_{inoise,RMS}\cdot (\frac{AR_{in}R_{s}}{R_s+R_{in}})^2 + V^2_{inoise,RMS} (\frac{AR_{in}}{R_s+R_{in}})^2 \ .
 $$
+
  Paying attention to the last two terms, this equation makes sense when there is no correlation between $V_{inoise,RMS}$ and $I_{inoise,RMS}$, why? Since when we consider the actual input of the amplifier, $V_{in}$, it should be (ignoring the thermal noise of $R_s$ ) the superposition of those two (I paste the circuit as below to clarify), right?  Therefore, the manner of the output noise should be the square of the superposition, rather than the summation of squares (i.e. square after summation).
 
 <img src="https://raw.githubusercontent.com/merengueLee/my-gallery/master/imag/20250725122007.png" alt="screenshot 2025-07-25 at 12.20.00" style="zoom:60%;" />
 
 Based on those, we can rewire the output noise (still ignoring the thermal noise of $R_s$ : 
+
 $$
 V^2_{onoise,RMS}=\left( \frac{AR_{in}}{R_s + R_{in}} \right)^2 [V_{inoise,RMS}+I_{inoise,RMS}\cdot R_s]^2 \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \   \\
 = \left( \frac{AR_{in}}{R_s + R_{in}} \right)^2 [V_{inoise,RMS}^2 + I_{inoise,RMS}^2 \cdot R_s + 2C \cdot V_{inoise,RMS} \cdot I_{inoise,RMS}],
 $$
+
 it can be seen that if $C=0$ , this equation will be equivalent to the one above. 
 
 Then, what about the correlation between them in the practical circuits? Is $C=0$ making sense? The answer is of course no, since inside the model, these two ($V_{inoise,RMS}$ and $I_{inoise,RMS}$) are derived from same noise mechanism. However, as Baker’s book saying, to use the model, “we generally assume no correlation ($C=0$) between $V_{inoise,RMS}$ and $I_{inoise,RMS}$.”. 
@@ -352,21 +380,29 @@ Then, what about the correlation between them in the practical circuits? Is $C=0
 This may be a point that is negligible since it too basic, but there are still some points are worthy to emphasise. 
 
 First thing first, is **taking the magnitude before squaring**, what that mean? Imagine, we have a amplifier and a voltage source with a source impedance $R_s$ as the amplifier’s input, and in addition, the input imedance is $Z_{in}$ (no longer $R_{in}$); then, the actual input singal of the amplifier is: 
+
 $$
 V_{in} = V_s \cdot	\frac{|Z_{in}|}{|R_s + Z_{in}|}\ \  or\ \  V_{in}^2 = V_s^2 \cdot	\frac{|Z_{in}^2|}{|R_s + Z_{in}|^2}.
 $$
+
  Here is the point, how to calculate the denominator? Do $a^2 +b^2 +2ab$ ? No! that’s what high school students may did. The correct way is treat it as a vector(it is actually) and calculate the magnitude. For example, if $Z_{in} = 1/j \omega C_{in}$, the correct way should be: 
+
 $$
 |R_{s}+Z_{in}|^2 = \left( \sqrt{R_s^2 + (1/\omega C_{in})} \right)^2 = R_s^2 + (1/\omega C_{in})^2.
 $$
+
 Second thing is **Optimum Source Resistance**. It is all known that to get both maximum power transfer and the best noise performance, the input resistance should be matched with the source resistance, like:
+
 $$
 R_{s,opt} = R_{in}. 
 $$
+
 However, when one of them is complex, for example the input impedance of the amplifier(actually true for most of the time), the equation above would be: 
+
 $$
 R_{s,opt} = |Z_{in}| = |R_{in} + jX_{in}| = \sqrt{R_{in}^2 + X_{in}^2}, 
 $$
+
 then, is it the optimum source resistance? Well, yes and no. “It only YES without regard for maximum power transfer” ( from Baker’s book. so does it mean best noise performance? better to have a derivation here). 
 
 The theory is: “the requirement for maximum power transfer is making the source impedance the **complex conjugate** of the load impedance.”  Therefore, as you can see, if the source resistance is real, this requirement will be impossible to be met.
@@ -411,9 +447,11 @@ Assuming the introduced noise is $V_{noise}$, for the noise it represents to the
 These are just some general conclusions, which are just give us a brief impression, and for the specific circuits, we need specific analysis. 
 
 Another about these four cases that should be pointed out is: for the Case 1 and Case 2, they are some time equivalent. Why? Because for some circuits (for example, the closed-loop op-amp), the noise in Case 1 is the input-referred noise of Case 2 (in other words, they are **correlated**), which means: 
+
 $$
 V_{noise,2} = A \cdot V_{noise,1},
 $$
+
 applying this into the equation of Case 2, it can be found that this equation turns into the equation of Case 1. Therefore, **in this case**, it can be concluded that the feedback doesn’t affect the circuit’s noise performance.  
 
 This conclusion can also be applied to the nosie introduced at the places like Case 3 and Case 4.
