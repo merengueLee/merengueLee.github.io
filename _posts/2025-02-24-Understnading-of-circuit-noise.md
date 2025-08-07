@@ -422,12 +422,14 @@ Assuming the introduced noise is $V_{noise}$, for the noise it represents to the
 
 + **Case 1**: the noise is amplified by closed-loop gain
 
+
   $$
   V_{out} = \frac{A}{1+\beta A} (V_{in}+V_{noise,1})
   $$
    
 
 + **Case 2**: the noise is shaped by loop-gain (Noise-shaping)
+
 
   $$
   V_{out} = \frac{A}{1+\beta A} \cdot V_{in} + \frac{1}{1+\beta A} \cdot V_{noise,2}
@@ -436,12 +438,14 @@ Assuming the introduced noise is $V_{noise}$, for the noise it represents to the
 
 + **Case 3**: equivalent to the **Case 1**, just a phase inverting (and normally we do not care about the phase of noise)
 
+
   $$
   V_{out} = \frac{A}{1+\beta A} (V_{in}-V_{noise,3})
   $$
   
 
 + **Case 4**: the noise is directly superpositioned at the output.
+
 
   $$
   V_{out} = \frac{A}{1+\beta A} (V_{in}- \beta \cdot V_{noise,4}) \approx \frac{1}{\beta} V_{in} - V_{noise,4}
