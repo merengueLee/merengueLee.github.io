@@ -107,18 +107,18 @@ But why do this system can know the spectral information of the input? It will b
 
 * $n=1$
   - The output of the multiplier is: 
-    $=cos(2\pi \cdot 100 \cdot t) \cdot (1+sin[2\pi \cdot 4.05kHz \cdot t ])$  Volts
+    $ =cos(2\pi \cdot 100 \cdot t) \cdot (1+sin[2\pi \cdot 4.05kHz \cdot t ]) $  Volts
     
-    $= cos(2\pi \cdot 100 \cdot t) + \frac{1}{2} \{ sin[2\pi(3.95k)t]+sin[2\pi(4.15k)t]\} $ Volts
+    $ = cos(2\pi \cdot 100 \cdot t) + \frac{1}{2} \{ sin[2\pi(3.95k)t]+sin[2\pi(4.15k)t]\} $ Volts
     
   - All the components can not pass the filter until $n=40$.
 * $n=40$
   * The output of the multiplier is: 
-    $= cos(2\pi \cdot 4k \cdot t) + \frac{1}{2} \{ sin[2\pi(50)t]+sin[2\pi(8.05k)t]\} $  Volts
+    $ = cos(2\pi \cdot 4k \cdot t) + \frac{1}{2} \{ sin[2\pi(50)t]+sin[2\pi(8.05k)t]\} $  Volts
   * The second term can pass the filter, and the measured amplitude at the power meter is $0.5\ V$.
 * $n=41$
   * The output of the multiplier is: 
-    $= cos(2\pi \cdot 4.1k \cdot t) + \frac{1}{2} \{ sin[2\pi(-50)t]+sin[2\pi(8.15k)t]\} $  Volts
+    $ = cos(2\pi \cdot 4.1k \cdot t) + \frac{1}{2} \{ sin[2\pi(-50)t]+sin[2\pi(8.15k)t]\} $  Volts
   * The second term can pass the filter (the phase is inverting), and the measured amplitude at the power meter is $0.5\ V$.
 
 $n=40$ and $n=41$ are actually the adjacent points of the input frequency component ($4.05kHz,\ n= 40.5$), and the sum of them are the amplitude of the input frequency component($4.05kHz$). 
