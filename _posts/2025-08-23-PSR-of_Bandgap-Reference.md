@@ -59,6 +59,7 @@ $$
 $$
 v_2 = -g_{mp} \cdot R_{out,2} \cdot v_c + g_{mp} \cdot R_{out,2} \cdot v_{dd} = (v_{dd} - v_c) \cdot g_{mp} \cdot R_{out,2} \ \ ,  
 $$
+
 in these two equations, it is assumed that $g_{mp1} = g_{mp2}=g_{mp}$, and the second term of both is derived from  the gain of single-stage common-gate amplifier. 
 
 
@@ -71,9 +72,11 @@ v_y = v_2 \cdot \frac{ R_{Q2}}{ R_3 + R_{Q2}} = v_2 \cdot \beta_2,
 $$
 
 where $\beta_1$ and $\beta_2$ are feedback-ratio of two feedback loops. 
+
 $$
 v_c = A_v \cdot (v_x - v_y) + A_{dd} \cdot v_{dd},
 $$
+
 where $A_{dd}$ is PSR of the OPA.
 
 
@@ -86,6 +89,7 @@ Based on equation (5), (6) and (7), it can be derived:
 $$
 v_x-v_y = v_1 \cdot \beta_1 -v_2 \cdot \beta_2 = (v_{dd}-v_c)\cdot g_{mp} \cdot (R_{out,1} \cdot \beta_1 - R_{out,2} \cdot \beta_2)
 $$
+
 Then, 
 
 
@@ -93,6 +97,7 @@ $$
 v_c = A_v \cdot (v_x-v_y) + A_{dd} \cdot v_{dd} 
 = \frac{g_{mp} \cdot A_v(R_{out,1} \cdot \beta_1 - R_{out,2} \cdot \beta_2)\cdot v_{dd}+A_{dd}\cdot v_{dd}}{1+g_{mp} \cdot A_v (R_{out,1} \cdot \beta_1 - R_{out,2} \cdot \beta_2)} .
 $$
+
 While for the output, it equals $v_1$, so: 
 
 
@@ -102,6 +107,7 @@ $$
 
 
 if the $R_{out,1} \approx R_{out,2}$ and $A_v >>1$, the output would be: 
+
 $$
 v_{REF} = \frac{1}{(\beta_1 - \beta_2)} \cdot \frac{1-A_{dd}}{A_v}.
 $$
