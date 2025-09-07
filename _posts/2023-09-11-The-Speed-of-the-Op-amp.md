@@ -86,6 +86,9 @@ In other words, the speed of charging at the linear setttling stage is determine
 #### Reference
 https://zhuanlan.zhihu.com/p/510377997
 
+https://www.edn.com/slew-rate-the-op-amp-speed-limit/
+
+
 
 
 
